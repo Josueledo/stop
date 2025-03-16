@@ -7,28 +7,38 @@ body{
     background: rgb(135, 135, 178);
     .start-button{
         position: absolute;
-        top: 20px;
+        top: calc(50% - 100px);
         left: calc(50% - 100px);
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         padding: 10px;
         border-radius: 50%;
+        border: none;
+        background-color: rgb(233, 233, 233);
+        cursor: pointer;
     }
+
     .container{
-        display: flex;
-        gap: 20px;
+        position: relative;
         width: 500px;
-        flex-wrap: wrap;
-   
+        height: 500px;
+        margin: auto;;
         span{
             background-color:rgb(241, 241, 241) ;
-            padding: 20px;
-            width: 70px;
-            height: 70px;
+            padding: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
+        }
+        .letter {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50%;
         }
     }
 }
@@ -36,4 +46,23 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+@media (width <= 800px) {
+    body{
+        .start-button{
+            top: calc(50% - 65px);
+            left: calc(50% - 65px);
+            width: 130px;
+            height: 130px;
+        }
+        .container{
+            width: 350px;
+            height: 350px;
+            .letter{
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
 }
